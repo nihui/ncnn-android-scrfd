@@ -1,0 +1,135 @@
+7767517
+133 154
+Input                    input.1                  0 1 input.1
+Convolution              Conv_0                   1 1 input.1 220 0=28 1=3 3=2 4=1 5=1 6=756 9=1
+Convolution              Conv_2                   1 1 220 223 0=28 1=3 4=1 5=1 6=7056 9=1
+Convolution              Conv_4                   1 1 223 226 0=56 1=3 4=1 5=1 6=14112 9=1
+Pooling                  MaxPool_6                1 1 226 227 1=2 2=2 5=1
+Split                    splitncnn_0              1 2 227 227_splitncnn_0 227_splitncnn_1
+Convolution              Conv_7                   1 1 227_splitncnn_1 230 0=56 1=3 4=1 5=1 6=28224 9=1
+Convolution              Conv_9                   1 1 230 532 0=56 1=3 4=1 5=1 6=28224
+BinaryOp                 Add_10                   2 1 532 227_splitncnn_0 233
+ReLU                     Relu_11                  1 1 233 234
+Split                    splitncnn_1              1 2 234 234_splitncnn_0 234_splitncnn_1
+Convolution              Conv_12                  1 1 234_splitncnn_1 237 0=56 1=3 4=1 5=1 6=28224 9=1
+Convolution              Conv_14                  1 1 237 538 0=56 1=3 4=1 5=1 6=28224
+BinaryOp                 Add_15                   2 1 538 234_splitncnn_0 240
+ReLU                     Relu_16                  1 1 240 241
+Split                    splitncnn_2              1 2 241 241_splitncnn_0 241_splitncnn_1
+Convolution              Conv_17                  1 1 241_splitncnn_1 244 0=56 1=3 4=1 5=1 6=28224 9=1
+Convolution              Conv_19                  1 1 244 544 0=56 1=3 4=1 5=1 6=28224
+BinaryOp                 Add_20                   2 1 544 241_splitncnn_0 247
+ReLU                     Relu_21                  1 1 247 248
+Split                    splitncnn_3              1 2 248 248_splitncnn_0 248_splitncnn_1
+Convolution              Conv_22                  1 1 248_splitncnn_1 251 0=88 1=3 3=2 4=1 5=1 6=44352 9=1
+Convolution              Conv_24                  1 1 251 550 0=88 1=3 4=1 5=1 6=69696
+Pooling                  AveragePool_25           1 1 248_splitncnn_0 254 0=1 1=2 2=2
+Convolution              Conv_26                  1 1 254 553 0=88 1=1 5=1 6=4928
+BinaryOp                 Add_27                   2 1 550 553 257
+ReLU                     Relu_28                  1 1 257 258
+Split                    splitncnn_4              1 2 258 258_splitncnn_0 258_splitncnn_1
+Convolution              Conv_29                  1 1 258_splitncnn_1 261 0=88 1=3 4=1 5=1 6=69696 9=1
+Convolution              Conv_31                  1 1 261 559 0=88 1=3 4=1 5=1 6=69696
+BinaryOp                 Add_32                   2 1 559 258_splitncnn_0 264
+ReLU                     Relu_33                  1 1 264 265
+Split                    splitncnn_5              1 2 265 265_splitncnn_0 265_splitncnn_1
+Convolution              Conv_34                  1 1 265_splitncnn_1 268 0=88 1=3 4=1 5=1 6=69696 9=1
+Convolution              Conv_36                  1 1 268 565 0=88 1=3 4=1 5=1 6=69696
+BinaryOp                 Add_37                   2 1 565 265_splitncnn_0 271
+ReLU                     Relu_38                  1 1 271 272
+Split                    splitncnn_6              1 2 272 272_splitncnn_0 272_splitncnn_1
+Convolution              Conv_39                  1 1 272_splitncnn_1 275 0=88 1=3 4=1 5=1 6=69696 9=1
+Convolution              Conv_41                  1 1 275 571 0=88 1=3 4=1 5=1 6=69696
+BinaryOp                 Add_42                   2 1 571 272_splitncnn_0 278
+ReLU                     Relu_43                  1 1 278 279
+Split                    splitncnn_7              1 3 279 279_splitncnn_0 279_splitncnn_1 279_splitncnn_2
+Convolution              Conv_44                  1 1 279_splitncnn_2 282 0=88 1=3 3=2 4=1 5=1 6=69696 9=1
+Convolution              Conv_46                  1 1 282 577 0=88 1=3 4=1 5=1 6=69696
+Pooling                  AveragePool_47           1 1 279_splitncnn_1 285 0=1 1=2 2=2
+Convolution              Conv_48                  1 1 285 580 0=88 1=1 5=1 6=7744
+BinaryOp                 Add_49                   2 1 577 580 288
+ReLU                     Relu_50                  1 1 288 289
+Split                    splitncnn_8              1 2 289 289_splitncnn_0 289_splitncnn_1
+Convolution              Conv_51                  1 1 289_splitncnn_1 292 0=88 1=3 4=1 5=1 6=69696 9=1
+Convolution              Conv_53                  1 1 292 586 0=88 1=3 4=1 5=1 6=69696
+BinaryOp                 Add_54                   2 1 586 289_splitncnn_0 295
+ReLU                     Relu_55                  1 1 295 296
+Split                    splitncnn_9              1 3 296 296_splitncnn_0 296_splitncnn_1 296_splitncnn_2
+Convolution              Conv_56                  1 1 296_splitncnn_2 299 0=224 1=3 3=2 4=1 5=1 6=177408 9=1
+Convolution              Conv_58                  1 1 299 592 0=224 1=3 4=1 5=1 6=451584
+Pooling                  AveragePool_59           1 1 296_splitncnn_1 302 0=1 1=2 2=2
+Convolution              Conv_60                  1 1 302 595 0=224 1=1 5=1 6=19712
+BinaryOp                 Add_61                   2 1 592 595 305
+ReLU                     Relu_62                  1 1 305 306
+Split                    splitncnn_10             1 2 306 306_splitncnn_0 306_splitncnn_1
+Convolution              Conv_63                  1 1 306_splitncnn_1 309 0=224 1=3 4=1 5=1 6=451584 9=1
+Convolution              Conv_65                  1 1 309 601 0=224 1=3 4=1 5=1 6=451584
+BinaryOp                 Add_66                   2 1 601 306_splitncnn_0 312
+ReLU                     Relu_67                  1 1 312 313
+Split                    splitncnn_11             1 2 313 313_splitncnn_0 313_splitncnn_1
+Convolution              Conv_68                  1 1 313_splitncnn_1 316 0=224 1=3 4=1 5=1 6=451584 9=1
+Convolution              Conv_70                  1 1 316 607 0=224 1=3 4=1 5=1 6=451584
+BinaryOp                 Add_71                   2 1 607 313_splitncnn_0 319
+ReLU                     Relu_72                  1 1 319 320
+Convolution              Conv_73                  1 1 279_splitncnn_0 321 0=56 1=1 5=1 6=4928
+Convolution              Conv_74                  1 1 296_splitncnn_0 322 0=56 1=1 5=1 6=4928
+Convolution              Conv_75                  1 1 320 323 0=56 1=1 5=1 6=12544
+Split                    splitncnn_12             1 2 323 323_splitncnn_0 323_splitncnn_1
+Interp                   Resize_94                1 1 323_splitncnn_1 342 0=1 1=2.000000e+00 2=2.000000e+00
+BinaryOp                 Add_95                   2 1 322 342 343
+Split                    splitncnn_13             1 2 343 343_splitncnn_0 343_splitncnn_1
+Interp                   Resize_114               1 1 343_splitncnn_1 362 0=1 1=2.000000e+00 2=2.000000e+00
+BinaryOp                 Add_115                  2 1 321 362 363
+Convolution              Conv_116                 1 1 363 364 0=56 1=3 4=1 5=1 6=28224
+Split                    splitncnn_14             1 2 364 364_splitncnn_0 364_splitncnn_1
+Convolution              Conv_117                 1 1 343_splitncnn_0 365 0=56 1=3 4=1 5=1 6=28224
+Convolution              Conv_118                 1 1 323_splitncnn_0 366 0=56 1=3 4=1 5=1 6=28224
+Convolution              Conv_119                 1 1 364_splitncnn_1 367 0=56 1=3 3=2 4=1 5=1 6=28224
+BinaryOp                 Add_120                  2 1 365 367 368
+Split                    splitncnn_15             1 2 368 368_splitncnn_0 368_splitncnn_1
+Convolution              Conv_121                 1 1 368_splitncnn_1 369 0=56 1=3 3=2 4=1 5=1 6=28224
+BinaryOp                 Add_122                  2 1 366 369 370
+Convolution              Conv_123                 1 1 368_splitncnn_0 371 0=56 1=3 4=1 5=1 6=28224
+Convolution              Conv_124                 1 1 370 372 0=56 1=3 4=1 5=1 6=28224
+Convolution              Conv_125                 1 1 364_splitncnn_0 373 0=80 1=3 4=1 6=40320
+GroupNorm                Add_134                  1 1 373 384 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_135                 1 1 384 385
+Convolution              Conv_136                 1 1 385 386 0=80 1=3 4=1 6=57600
+GroupNorm                Add_145                  1 1 386 397 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_146                 1 1 397 398
+Convolution              Conv_147                 1 1 398 399 0=80 1=3 4=1 6=57600
+GroupNorm                Add_156                  1 1 399 410 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_157                 1 1 410 411
+Split                    splitncnn_16             1 2 411 411_splitncnn_0 411_splitncnn_1
+Convolution              Conv_158                 1 1 411_splitncnn_1 417 0=2 1=3 4=1 5=1 6=1440
+Convolution              Conv_159                 1 1 411_splitncnn_0 413 0=8 1=3 4=1 5=1 6=5760
+BinaryOp                 Mul_160                  1 1 413 bbox_8 0=2 1=1 2=8.170338e-01
+Sigmoid                  Sigmoid_164              1 1 417 score_8
+Convolution              Conv_168                 1 1 371 422 0=80 1=3 4=1 6=40320
+GroupNorm                Add_177                  1 1 422 433 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_178                 1 1 433 434
+Convolution              Conv_179                 1 1 434 435 0=80 1=3 4=1 6=57600
+GroupNorm                Add_188                  1 1 435 446 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_189                 1 1 446 447
+Convolution              Conv_190                 1 1 447 448 0=80 1=3 4=1 6=57600
+GroupNorm                Add_199                  1 1 448 459 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_200                 1 1 459 460
+Split                    splitncnn_17             1 2 460 460_splitncnn_0 460_splitncnn_1
+Convolution              Conv_201                 1 1 460_splitncnn_1 466 0=2 1=3 4=1 5=1 6=1440
+Convolution              Conv_202                 1 1 460_splitncnn_0 462 0=8 1=3 4=1 5=1 6=5760
+BinaryOp                 Mul_203                  1 1 462 bbox_16 0=2 1=1 2=1.195922e+00
+Sigmoid                  Sigmoid_207              1 1 466 score_16
+Convolution              Conv_211                 1 1 372 471 0=80 1=3 4=1 6=40320
+GroupNorm                Add_220                  1 1 471 482 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_221                 1 1 482 483
+Convolution              Conv_222                 1 1 483 484 0=80 1=3 4=1 6=57600
+GroupNorm                Add_231                  1 1 484 495 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_232                 1 1 495 496
+Convolution              Conv_233                 1 1 496 497 0=80 1=3 4=1 6=57600
+GroupNorm                Add_242                  1 1 497 508 0=16 1=80 2=1.000000e-05
+ReLU                     Relu_243                 1 1 508 509
+Split                    splitncnn_18             1 2 509 509_splitncnn_0 509_splitncnn_1
+Convolution              Conv_244                 1 1 509_splitncnn_1 515 0=2 1=3 4=1 5=1 6=1440
+Convolution              Conv_245                 1 1 509_splitncnn_0 511 0=8 1=3 4=1 5=1 6=5760
+BinaryOp                 Mul_246                  1 1 511 bbox_32 0=2 1=1 2=1.814443e+00
+Sigmoid                  Sigmoid_250              1 1 515 score_32

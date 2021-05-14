@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">scrfdncnn</string>
+    <string-array name="model_array">
+        <item>500m</item>
+        <item>1g</item>
+        <item>2.5g</item>
+        <item>2.5g_kps</item>
+        <item>10g</item>
+        <item>10g_kps</item>
+        <item>34g</item>
+    </string-array>
+    <string-array name="cpugpu_array">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
+</resources>
