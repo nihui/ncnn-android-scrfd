@@ -172,7 +172,7 @@ JNIEXPORT void JNI_OnUnload(JavaVM* vm, void* reserved)
 // public native boolean loadModel(AssetManager mgr, int modelid, int cpugpu);
 JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_loadModel(JNIEnv* env, jobject thiz, jobject assetManager, jint modelid, jint cpugpu)
 {
-    if (modelid < 0 || modelid > 6 || cpugpu < 0 || cpugpu > 1)
+    if (modelid < 0 || modelid > 7 || cpugpu < 0 || cpugpu > 1)
     {
         return JNI_FALSE;
     }
@@ -184,6 +184,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_scrfdncnn_SCRFDNcnn_loadModel(JNIEnv
     const char* modeltypes[] =
     {
         "500m",
+        "500m_kps",
         "1g",
         "2.5g",
         "2.5g_kps",

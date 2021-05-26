@@ -3,6 +3,7 @@
     <string name="app_name">scrfdncnn</string>
     <string-array name="model_array">
         <item>500m</item>
+        <item>500m_kps</item>
         <item>1g</item>
         <item>2.5g</item>
         <item>2.5g_kps</item>
