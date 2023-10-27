@@ -9,7 +9,7 @@ https://github.com/Tencent/ncnn
 https://github.com/nihui/opencv-mobile
 
 ## android apk file download
-https://github.com/nihui/ncnn-android-nanodet/releases/latest
+https://github.com/nihui/ncnn-android-scrfd/releases/latest
 
 ## how to build and run
 ### step1
