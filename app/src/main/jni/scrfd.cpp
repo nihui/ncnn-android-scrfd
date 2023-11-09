@@ -341,10 +341,10 @@ int SCRFD::detect(const cv::Mat& rgb, std::vector<FaceObject>& faceobjects, floa
         scales[1] = 2.f;
         ncnn::Mat anchors = generate_anchors(base_size, ratios, scales);
 
-        std::vector<FaceObject> faceobjects32;
-        generate_proposals(anchors, feat_stride, score_blob, bbox_blob, kps_blob, prob_threshold, faceobjects32);
+        std::vector<FaceObject> faceobjects8;
+        generate_proposals(anchors, feat_stride, score_blob, bbox_blob, kps_blob, prob_threshold, faceobjects8);
 
-        faceproposals.insert(faceproposals.end(), faceobjects32.begin(), faceobjects32.end());
+        faceproposals.insert(faceproposals.end(), faceobjects8.begin(), faceobjects8.end());
     }
 
     // stride 16
@@ -387,10 +387,10 @@ int SCRFD::detect(const cv::Mat& rgb, std::vector<FaceObject>& faceobjects, floa
         scales[1] = 2.f;
         ncnn::Mat anchors = generate_anchors(base_size, ratios, scales);
 
-        std::vector<FaceObject> faceobjects8;
-        generate_proposals(anchors, feat_stride, score_blob, bbox_blob, kps_blob, prob_threshold, faceobjects8);
+        std::vector<FaceObject> faceobjects32;
+        generate_proposals(anchors, feat_stride, score_blob, bbox_blob, kps_blob, prob_threshold, faceobjects32);
 
-        faceproposals.insert(faceproposals.end(), faceobjects8.begin(), faceobjects8.end());
+        faceproposals.insert(faceproposals.end(), faceobjects32.begin(), faceobjects32.end());
     }
 
     // sort all proposals by score from highest to lowest
