@@ -5,12 +5,14 @@ plugins {
 android {
     namespace 'com.tencent.scrfdncnn'
     compileSdk 33
+    ndkVersion "29.0.14206865"
 
     defaultConfig {
         applicationId "com.tencent.scrfdncnn"
         archivesBaseName = "$applicationId"
 
-        minSdk 24
+        minSdkVersion 24
+        targetSdkVersion 35
 
         externalNativeBuild {
             cmake {
