@@ -10,4 +10,4 @@ find_package(ncnn REQUIRED)
 
 add_library(scrfdncnn SHARED scrfdncnn.cpp scrfd.cpp ndkcamera.cpp)
 
-target_link_libraries(scrfdncnn ncnn ${OpenCV_LIBS} camera2ndk mediandk)
+target_link_libraries(scrfdncnn ncnn ${OpenCV_LIBS} dl)
